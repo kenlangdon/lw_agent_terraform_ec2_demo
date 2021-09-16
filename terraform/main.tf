@@ -55,11 +55,6 @@ resource "aws_instance" "lw-reesy" {
   }
 
   provisioner "file" {
-    content     = templatefile("${path.module}/templates/config.json.tpl", { lw_token = var.lw_token })
-    destination = "/tmp/config.json"
-  }
-
-  provisioner "file" {
     content     = templatefile("${path.module}/templates/linux_node_user_data.sh.tpl", { lw_token = var.lw_token })
     destination = "/tmp/linux_node_user_data.sh"
   }
