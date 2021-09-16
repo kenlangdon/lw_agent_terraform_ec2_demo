@@ -19,6 +19,21 @@ data "aws_ami" "ubuntu" {
   }
 }
 
+locals {
+  common_tags = {
+    X-Dept        = "${var.tag_dept}"
+    X-Customer    = "${var.tag_customer}"
+    X-Project     = "${var.tag_project}"
+    X-Application = "${var.tag_application}"
+    X-Contact     = "${var.tag_contact}"
+    X-TTL         = "${var.tag_ttl}"
+  }
+}
+
+resource "random_id" "random" {
+  byte_length = 4
+}
+
 #
 # instances
 #
@@ -31,6 +46,7 @@ resource "aws_instance" "lw-reesy" {
   availability_zone      = "${var.aws_region}${var.aws_availability_zone}"
   vpc_security_group_ids = [aws_security_group.ssh.id, aws_security_group.lw.id]
   subnet_id              = aws_subnet.public.id
+  iam_instance_profile   = aws_iam_instance_profile.lw_instance_profile.name
 
   root_block_device {
     delete_on_termination = true

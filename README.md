@@ -94,3 +94,9 @@ subnet_private_id = subnet-0132085bfe976b75f
 subnet_public_id = subnet-0aefe221eb5ffaf77
 vpc_id = vpc-081791ad1bf742a05
 ```
+  
+
+### Check in the Lacework UI
+Wait about 5 minutes and you will see the agents appear in the Lacework UI.  Go to Resources -> Agent and check for your instance.
+  
+![Lacework Agent](/images/agent.png)

@@ -51,8 +51,7 @@ variable "node_counter" {
   default = "1"
 }
 
-variable "lw_token" {
-  
+variable "lw_token" { 
 }
 
 #
