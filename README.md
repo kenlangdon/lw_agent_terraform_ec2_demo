@@ -1,5 +1,9 @@
 # Lacework Agent Terraform EC2 Demo Repo
   
+[![HIPAA](https://app.soluble.cloud/api/v1/public/badges/c0cee9fa-e0cc-4bcd-810e-35bdb24ab747.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_agent_terraform_ec2_demo)
+[![IaC](https://app.soluble.cloud/api/v1/public/badges/09614798-b86e-42ca-8cef-84580a269420.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_agent_terraform_ec2_demo)
+[![CIS](https://app.soluble.cloud/api/v1/public/badges/881cd7ef-cf59-4e41-b9cb-312d5b4127e6.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_agent_terraform_ec2_demo)
+  
 ### About
 A Terraform script to deploy an AWS EC2 instance and install / configure the Lacework Agent automatically.
   
