@@ -11,23 +11,23 @@ output "image_id" {
 # lw server details
 
 # output "lw_server_name" {
-#   value = [aws_instance.lw-reesy.tags.*.Name]
+#   value = [aws_instance.lw-kenny.tags.*.Name]
 # }
 
 output "lw_server_id" {
-  value = [aws_instance.lw-reesy.*.id]
+  value = [aws_instance.lw-kenny.*.id]
 }
 
 # output "lw_server_ami" {
-#   value = aws_instance.lw-reesy.ami
+#   value = aws_instance.lw-kenny.ami
 # }
 
 # output "lw_serverinstance_type" {
-#   value = aws_instance.lw-reesy.instance_type
+#   value = aws_instance.lw-kenny.instance_type
 # }
 
 output "lw_server_public_ip" {
-  value = [aws_instance.lw-reesy.*.public_ip]
+  value = [aws_instance.lw-kenny.*.public_ip]
 }
 
 

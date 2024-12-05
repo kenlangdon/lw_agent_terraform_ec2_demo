@@ -2,7 +2,7 @@
 # Data
 #
 
-# This retrieves the latest AMI ID for Ubuntu 16.04.
+# This retrieves the latest AMI ID for Ubuntu 22.04.
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -10,7 +10,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
 
   filter {
@@ -38,7 +38,7 @@ resource "random_id" "random" {
 # instances
 #
 
-resource "aws_instance" "lw-reesy" {
+resource "aws_instance" "lw-kenny" {
   count                  = var.node_counter
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.linux_node_instance_type
@@ -55,7 +55,7 @@ resource "aws_instance" "lw-reesy" {
   }
 
   tags = {
-    Name          = "lw-reesy-ec2-${count.index}"
+    Name          = "lw-kenny-ec2-${count.index}"
     X-Dept        = var.tag_dept
     X-Customer    = var.tag_customer
     X-Project     = var.tag_project
